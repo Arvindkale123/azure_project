@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "Parquet1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -12,17 +12,17 @@
 			"folder": {
 				"type": "string"
 			},
-			"filer": {
+			"file": {
 				"type": "string"
 			}
 		},
 		"annotations": [],
-		"type": "Json",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().filer",
+					"value": "@dataset().file",
 					"type": "Expression"
 				},
 				"folderPath": {
@@ -33,15 +33,9 @@
 					"value": "@dataset().container",
 					"type": "Expression"
 				}
-			}
+			},
+			"compressionCodec": "snappy"
 		},
-		"schema": {
-			"type": "object",
-			"properties": {
-				"cdc": {
-					"type": "string"
-				}
-			}
-		}
+		"schema": []
 	}
 }
