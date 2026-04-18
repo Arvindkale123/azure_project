@@ -1,0 +1,9 @@
+{
+	"name": "df-arvindproject",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9d621514-f0f7-43d7-ae34-f7aeb1eee2d7",
+		"tenantId": "be355b48-2552-413e-ab82-2a7a29eebfd2"
+	}
+}
